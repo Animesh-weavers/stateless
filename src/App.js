@@ -1,9 +1,11 @@
-import React from 'react'
+import Users from './components/Users';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <Users />
+    </div>
+  );
 }
 
-export default App
+export default App;
