@@ -11,6 +11,16 @@ class Users extends Component {
     };
     this.toggleUsersHandler = this.toggleUsersHandler.bind(this);
   }
+  componentDidUpdate(){
+    // try {
+    //   someCodeWhichMightFail();
+    // } catch (error) {
+    //   console.log(error)
+    // }
+    if(this.props.users.length===0){
+      throw new Error("no users found!!")
+    }
+  }
   toggleUsersHandler() {
     //update state
     this.setState((curState) => {
